@@ -7,11 +7,22 @@
 
 <link rel="stylesheet" href="style.css">
 
+<!-- Fonte -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+
 </head>
 
 <body>
 
+<!-- LOADER -->
+<div id="loader">
+    <h1>Famix 3D</h1>
+</div>
+
+<!-- PARTICULAS -->
 <div id="particles-js"></div>
 
 <header>
@@ -25,27 +36,27 @@
     </nav>
 </header>
 
-<section class="hero">
+<section class="hero" data-aos="fade-up">
     <h1>Impressão 3D Profissional</h1>
-    <p>Transformando ideias em realidade com precisão</p>
+    <p>Transformamos sua ideia em realidade com tecnologia e precisão</p>
     <a href="#contato" class="btn">Solicitar Orçamento</a>
 </section>
 
 <section id="servicos" class="servicos">
-    <h2>Serviços</h2>
+    <h2 data-aos="fade-up">Serviços</h2>
 
     <div class="cards">
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
             <h3>Prototipagem</h3>
             <p>Protótipos rápidos e funcionais</p>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
             <h3>Peças Personalizadas</h3>
             <p>Produção sob medida</p>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
             <h3>Modelagem 3D</h3>
             <p>Criação de projetos digitais</p>
         </div>
@@ -53,27 +64,34 @@
 </section>
 
 <section id="portfolio" class="portfolio">
-    <h2>Portfólio</h2>
+    <h2 data-aos="fade-up">Portfólio</h2>
 
     <div class="galeria">
-        <img src="img/peca1.jpg">
-        <img src="img/peca2.jpg">
-        <img src="img/peca3.jpg">
+        <img src="img/peca1.jpg" data-aos="fade-up">
+        <img src="img/peca2.jpg" data-aos="fade-up">
+        <img src="img/peca3.jpg" data-aos="fade-up">
     </div>
 </section>
 
 <section id="contato" class="contato">
-    <h2>Contato</h2>
-    <p>Fale com a gente pelo WhatsApp</p>
-    <a href="https://wa.me/SEUNUMERO" class="btn">Chamar no WhatsApp</a>
+    <h2>Solicitar Orçamento</h2>
+
+    <form class="form">
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu email" required>
+        <textarea placeholder="Descreva seu projeto"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
 </section>
 
+<!-- WHATSAPP -->
 <a href="https://wa.me/SEUNUMERO" class="whatsapp">💬</a>
 
 <footer>
     <p>© 2026 Famix 3D</p>
 </footer>
 
+<!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <script>
@@ -85,6 +103,16 @@ particlesJS("particles-js", {
     line_linked: { enable: true },
     color: { value: "#00d4ff" }
   }
+});
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init();
+
+window.addEventListener("load", function(){
+    document.getElementById("loader").style.display = "none";
 });
 </script>
 

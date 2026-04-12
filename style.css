@@ -41,7 +41,7 @@ header.scrolled {
 }
 
 .logo {
-    height: 80px;
+    height: 150px;
     transition: transform 0.5s ease, filter 0.5s ease;
     animation: float 4s ease-in-out infinite;
 }

@@ -49,21 +49,13 @@ header {
     transition: 0.3s;
 }
 
-/* HEADER AO ROLAR */
 header.scrolled {
     background: rgba(0,0,0,0.9);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
 }
 
 /* LOGO */
 .logo {
     height: 60px;
-    width: auto;
-    transition: 0.3s;
-}
-
-.logo:hover {
-    transform: scale(1.1);
 }
 
 /* MENU */
@@ -71,8 +63,6 @@ nav a {
     margin-left: 20px;
     color: #00d4ff;
     text-decoration: none;
-    transition: 0.3s;
-    font-weight: 500;
 }
 
 nav a:hover {
@@ -95,11 +85,6 @@ nav a:hover {
     color: #00d4ff;
 }
 
-.hero p {
-    margin: 20px 0;
-    opacity: 0.7;
-}
-
 /* BOTÃO */
 .btn {
     background: #00d4ff;
@@ -107,72 +92,34 @@ nav a:hover {
     border-radius: 10px;
     color: black;
     text-decoration: none;
-    transition: 0.3s;
-    font-weight: bold;
 }
 
-.btn:hover {
-    background: white;
-    transform: scale(1.05);
-}
-
-/* SERVIÇOS */
-.servicos {
-    padding: 100px 20px;
-    text-align: center;
-}
-
+/* CARDS */
 .cards {
     display: flex;
-    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
     background: #111;
-    padding: 25px;
-    border-radius: 15px;
+    padding: 20px;
+    border-radius: 10px;
     width: 250px;
-    transition: 0.3s;
-    border: 1px solid rgba(0,212,255,0.1);
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    background: #161616;
-    border: 1px solid #00d4ff;
-}
-
-/* PORTFÓLIO */
-.portfolio {
-    padding: 100px 20px;
-    text-align: center;
-}
-
+/* GALERIA */
 .galeria {
     display: flex;
-    justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .galeria img {
     width: 250px;
     border-radius: 10px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.galeria img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px #00d4ff;
-}
-
-/* CONTATO */
-.contato {
-    text-align: center;
-    padding: 100px 20px;
 }
 
 /* FORM */
@@ -181,35 +128,7 @@ nav a:hover {
     flex-direction: column;
     max-width: 400px;
     margin: auto;
-    gap: 12px;
-}
-
-.form input,
-.form textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    font-family: inherit;
-}
-
-.form textarea {
-    min-height: 100px;
-    resize: none;
-}
-
-.form button {
-    background: #00d4ff;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.form button:hover {
-    background: white;
+    gap: 10px;
 }
 
 /* WHATSAPP */
@@ -220,25 +139,6 @@ nav a:hover {
     background: #25D366;
     padding: 15px;
     border-radius: 50%;
-    font-size: 22px;
-    text-decoration: none;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    animation: pulse 1.5s infinite;
-}
-
-/* ANIMAÇÃO WHATS */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-    }
-    70% {
-        transform: scale(1.1);
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-    }
-    100% {
-        transform: scale(1);
-    }
 }
 
 /* FOOTER */
@@ -248,34 +148,8 @@ footer {
     background: #111;
 }
 
-/* ANIMAÇÃO REVEAL */
-.reveal {
-    opacity: 0;
-    transform: translateY(60px);
-    transition: all 0.8s ease;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* RESPONSIVO */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 30px;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .galeria img {
-        width: 100%;
-        max-width: 300px;
-    }
-
     header {
         padding: 15px 20px;
     }
@@ -283,9 +157,8 @@ footer {
     nav {
         display: none;
     }
-}
 
-/* SCROLL SUAVE */
-html {
-    scroll-behavior: smooth;
+    .hero h1 {
+        font-size: 30px;
+    }
 }

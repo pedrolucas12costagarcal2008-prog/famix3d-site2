@@ -38,14 +38,17 @@ header {
 header.scrolled {
     background: rgba(0,0,0,0.9);
     box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+/* LOGO */
 .logo {
     height: 80px;
+    width: auto;
     transition: 0.3s;
 }
 
 .logo:hover {
     transform: scale(1.1);
-}
 }
 
 /* MENU */
@@ -225,9 +228,6 @@ footer {
         font-size: 30px;
     }
 
-    header {
-        padding: 15px 20px;
-    }
 
     .card {
         width: 100%;

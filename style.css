@@ -38,25 +38,14 @@ header {
 header.scrolled {
     background: rgba(0,0,0,0.9);
     box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-}
-
 .logo {
-    height: 150px;
-    transition: transform 0.5s ease, filter 0.5s ease;
-    animation: float 4s ease-in-out infinite;
+    height: 80px;
+    transition: 0.3s;
 }
 
-/* flutuação suave */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-}
-
-/* efeito ao passar o mouse */
 .logo:hover {
     transform: scale(1.1);
-    filter: drop-shadow(0 0 10px #00d4ff);
+}
 }
 
 /* MENU */

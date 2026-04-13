@@ -1,3 +1,80 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #0a0a0a, #050505);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* PARTICULAS */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    transition: top 0.4s ease, background 0.3s ease;
+}
+
+/* HEADER AO ROLAR */
+header.scrolled {
+    background: rgba(0,0,0,0.9);
+    box-shadow: 0 5px 30px rgba(0,0,0,0.8);
+}
+
+/* LOGO */
+.logo {
+    height: 75px;
+    width: auto;
+    transition: 0.4s;
+    animation: float 4s ease-in-out infinite;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 12px #00d4ff);
+}
+
+/* MENU */
+nav a {
+    margin-left: 25px;
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+/* LINHA ANIMADA */
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #00d4ff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
 
 nav a:hover::after {
     width: 100%;
@@ -33,7 +110,7 @@ nav a:hover::after {
     color: black;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
@@ -60,7 +137,7 @@ nav a:hover::after {
     padding: 30px;
     border-radius: 20px;
     width: 260px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     border: 1px solid rgba(0,212,255,0.1);
 }
 
@@ -85,8 +162,11 @@ nav a:hover::after {
 
 .galeria img {
     width: 250px;
+    height: 250px;
+    object-fit: cover;
     border-radius: 12px;
-    transition: 0.4s;
+    transition: all 0.4s ease;
+    cursor: pointer;
 }
 
 .galeria img:hover {
@@ -116,8 +196,15 @@ nav a:hover::after {
     border: none;
     background: #111;
     color: white;
+    outline: none;
 }
 
+.form input:focus,
+.form textarea:focus {
+    box-shadow: 0 0 8px #00d4ff;
+}
+
+/* BOTÃO FORM */
 .form button {
     background: linear-gradient(45deg, #00d4ff, #0099ff);
     border: none;
@@ -125,10 +212,12 @@ nav a:hover::after {
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .form button:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 10px #00d4ff;
 }
 
 /* WHATSAPP */
@@ -141,6 +230,7 @@ nav a:hover::after {
     border-radius: 50%;
     font-size: 22px;
     animation: pulse 1.5s infinite;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 /* ANIMAÇÕES */
@@ -160,7 +250,7 @@ nav a:hover::after {
 .reveal {
     opacity: 0;
     transform: translateY(60px);
-    transition: 0.8s;
+    transition: all 0.8s ease;
 }
 
 .reveal.active {
@@ -176,5 +266,11 @@ nav a:hover::after {
 
     header {
         padding: 15px 20px;
+    }
+
+    .galeria img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
     }
 }

@@ -8,6 +8,9 @@
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
+<!-- Ícones (WhatsApp bonito) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -21,7 +24,8 @@
 <div id="particles-js"></div>
 
 <header>
-    <img src="/img/logo.jpg" class="logo">
+    <!-- CORRIGIDO -->
+    <img src="img/logo.jpg" class="logo">
 
     <nav>
         <a href="#">Início</a>
@@ -66,7 +70,7 @@
 
     <div class="galeria">
         <img src="img/peca1.jpg">
-        <img src="img/peca21.jpg">
+        <img src="img/peca21.jpg"> <!-- CORRIGIDO -->
         <img src="img/peca3.jpg">
     </div>
 </section>
@@ -83,9 +87,9 @@
     </form>
 </section>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/5551980124417" class="whatsapp">
-    <img src="img/whatsapp.png" alt="WhatsApp">
+<!-- WHATSAPP BONITO -->
+<a href="https://wa.me/5551980124417?text=Olá,%20quero%20um%20orçamento%20de%20impressão%203D" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
 </a>
 
 <footer>
@@ -132,7 +136,7 @@ window.addEventListener("scroll", function() {
     header.classList.toggle("scrolled", window.scrollY > 50);
 });
 
-// HEADER SUMIR / VOLTAR 🔥
+// HEADER SUMIR / VOLTAR
 let lastScroll = 0;
 
 window.addEventListener("scroll", () => {

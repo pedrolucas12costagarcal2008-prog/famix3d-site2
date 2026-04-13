@@ -6,9 +6,7 @@
 <title>Famix 3D</title>
 
 <link rel="stylesheet" href="style.css">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 
 </head>
 
@@ -67,9 +65,9 @@
     <h2>Portfólio</h2>
 
     <div class="galeria">
-        <img src="https://via.placeholder.com/250">
-        <img src="https://via.placeholder.com/250">
-        <img src="https://via.placeholder.com/250">
+        <img src="img/peca1.jpg">
+        <img src="img/peca2.jpg">
+        <img src="img/peca3.jpg">
     </div>
 </section>
 
@@ -92,6 +90,7 @@
     <p>© 2026 Famix 3D</p>
 </footer>
 
+<!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <script>
@@ -104,52 +103,49 @@ particlesJS("particles-js", {
     color: { value: "#00d4ff" }
   }
 });
-</script>
 
-<script>
+// LOADER
 window.addEventListener("load", function(){
     document.getElementById("loader").style.display = "none";
 });
 
+// REVEAL
 function reveal() {
     const reveals = document.querySelectorAll(".reveal");
 
     reveals.forEach((el) => {
         const windowHeight = window.innerHeight;
         const elementTop = el.getBoundingClientRect().top;
-        const visible = 100;
 
-        if (elementTop < windowHeight - visible) {
+        if (elementTop < windowHeight - 100) {
             el.classList.add("active");
         }
     });
 }
-
 window.addEventListener("scroll", reveal);
 
+// HEADER SCROLLED
 window.addEventListener("scroll", function() {
     const header = document.querySelector("header");
     header.classList.toggle("scrolled", window.scrollY > 50);
 });
-</script>
 
-</body>
-</html>
-<script>
+// HEADER SUMIR / VOLTAR 🔥
 let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
     const header = document.querySelector("header");
     const currentScroll = window.pageYOffset;
 
-    if (currentScroll > lastScroll) {
-        // descendo
+    if (currentScroll > lastScroll && currentScroll > 50) {
         header.style.top = "-100px";
     } else {
-        // subindo
         header.style.top = "0";
     }
 
     lastScroll = currentScroll;
 });
 </script>
+
+</body>
+</html>

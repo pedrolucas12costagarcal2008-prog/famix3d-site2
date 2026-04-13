@@ -8,10 +8,11 @@
 /* BASE */
 body {
     font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #0a0a0a, #050505);
+    background: #000; /* PRETO TOTAL */
     color: white;
     overflow-x: hidden;
 }
+
 
 /* PARTICULAS */
 #particles-js {

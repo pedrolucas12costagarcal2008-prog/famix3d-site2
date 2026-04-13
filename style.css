@@ -1,164 +1,55 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* BASE */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #050505;
-    color: white;
-    overflow-x: hidden;
-}
-
-/* LOADER */
-#loader {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: #050505;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    font-size: 30px;
-    color: #00d4ff;
-}
-
-/* PARTICULAS */
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-/* HEADER */
-header {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    transition: 0.3s;
-}
-
-header.scrolled {
-    background: rgba(0,0,0,0.9);
-}
-
-/* LOGO */
+/* 1. Logo fix */
 .logo {
-    height: 300px;
+    height: 50px; /* was 300px — way too large for a header */
 }
 
-/* MENU */
-nav a {
-    margin-left: 20px;
-    color: #00d4ff;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: white;
-}
-
-/* HERO */
-.hero {
-    height: 100vh;
-    padding-top: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 45px;
-    color: #00d4ff;
-}
-
-/* BOTÃO */
-.btn {
-    background: #00d4ff;
-    padding: 12px 25px;
-    border-radius: 10px;
-    color: black;
-    text-decoration: none;
-}
-
-/* CARDS */
-.cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
+/* 2. Card hover effect — currently static */
 .card {
-    background: #111;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
 }
 
-/* GALERIA */
-.galeria {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
+/* 3. Button hover state — missing */
+.btn {
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+}
+.btn:hover {
+    background: #00b8d9;
+    transform: scale(1.05);
 }
 
-.galeria img {
-    width: 250px;
-    border-radius: 10px;
+/* 4. Form inputs — not styled at all */
+.form input,
+.form textarea {
+    background: #1a1a1a;
+    border: 1px solid #00d4ff44;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.form input:focus,
+.form textarea:focus {
+    border-color: #00d4ff;
 }
 
-/* FORM */
-.form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-    gap: 10px;
-}
-
-/* WHATSAPP */
+/* 5. WhatsApp icon alignment */
 .whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    padding: 15px;
-    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s;
 }
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111;
-}
-
-/* RESPONSIVO */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-    }
+.whatsapp:hover {
+    transform: scale(1.1);
 }
